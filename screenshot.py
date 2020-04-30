@@ -36,7 +36,7 @@ if __name__ == '__main__':
     if len(argv) != 3:
         print(f"Usage: {argv[0]} <source> <destination>")
     else:
-        res, files = move_pngs('.', 'PNGs/')
+        res, files = move_pngs(argv[1], argv[2])
         if not res:
             files = '\n'.join(files)
             print(f"These files failed: {files}")
